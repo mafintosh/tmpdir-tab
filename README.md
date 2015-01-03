@@ -1,4 +1,4 @@
-# tmpdir.sh
+# tmpdir-tab
 
 Bash helper gives you a tmpdir per terminal tab
 and cleans it up when you exit
@@ -6,7 +6,7 @@ and cleans it up when you exit
 ## Install
 
 ```
-npm install -g tmpdir.sh
+npm install -g tmpdir-tab
 ```
 
 ## Usage
@@ -14,8 +14,8 @@ npm install -g tmpdir.sh
 First add the following line to your .bashrc or .bash_profile
 
 ``` sh
-if [ -f $(which tmpdir.sh) ]; then
-  . $(which tmpdir.sh)
+if [ -f $(which tmpdir-tab) ]; then
+  . $(which tmpdir-tab)
 fi
 ```
 
