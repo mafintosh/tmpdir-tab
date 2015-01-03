@@ -1,6 +1,6 @@
 # tmpdir-tab
 
-Bash helper gives you a tmpdir per terminal tab
+Bash helper that gives you a tmpdir per terminal tab
 and cleans it up when you exit
 
 ## Install
