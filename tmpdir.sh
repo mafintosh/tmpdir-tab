@@ -1,14 +1,17 @@
 #!/bin/bash
 
-TMPDIR="/tmp/tmpdir/$RANDOM"
+TERM_TMPDIR="/tmp/tmpdir/$RANDOM"
 
 tmpdir () {
-  mkdir -p "$TMPDIR"
-  cd "$TMPDIR"
+  mkdir -p "$TERM_TMPDIR"
+  cd "$TERM_TMPDIR"
 }
 
 _tmpdir_on_exit () {
-  rm -rf "$TMPDIR"
+  if [ -d "$TERM_TMPDIR" ]; then
+    rm -rf "$TERM_TMPDIR"
+    rmdir /tmp/tmpdir &>/dev/null || true
+  fi
 }
 
 trap _tmpdir_on_exit EXIT
