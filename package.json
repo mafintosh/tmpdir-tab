@@ -1,7 +1,7 @@
 {
   "name": "tmpdir-tab",
   "description": "Bash helper gives you a tmpdir per terminal tab and cleans it up when you exit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "tmpdir-tab",
   "bin": {
     "tmpdir-tab": "./tmpdir.sh"
