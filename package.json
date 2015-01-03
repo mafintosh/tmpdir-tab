@@ -1,0 +1,25 @@
+{
+  "name": "tmpdir.sh",
+  "description": "Bash helper gives you a tmpdir per terminal tab and cleans it up when you exit",
+  "version": "0.0.0",
+  "main": "tmpdir.sh",
+  "bin": {
+    "tmpdir.sh": "./tmpdir.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mafintosh/tmpdir.sh"
+  },
+  "keywords": [
+    "bash",
+    "tmp",
+    "bash_profile",
+    "bashrc"
+  ],
+  "author": "Mathias Buus (@mafintosh)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mafintosh/tmpdir.sh/issues"
+  },
+  "homepage": "https://github.com/mafintosh/tmpdir.sh"
+}
