@@ -1,14 +1,12 @@
 #!/bin/bash
 
-TMPDIR_TAB="/tmp/tmpdir/$RANDOM"
-
 tmpdir () {
-  mkdir -p "$TMPDIR_TAB"
+  [ "$TMPDIR_TAB" == "" ] && TMPDIR_TAB="$(mktemp -d /tmp/tmpdir/XXXXXX)"
   cd "$TMPDIR_TAB"
 }
 
 _tmpdir_on_exit () {
-  if [ -d "$TMPDIR_TAB" ]; then
+  if [ "$TMPDIR_TAB" != "" ] && [ -d "$TMPDIR_TAB" ]; then
     rm -rf "$TMPDIR_TAB"
     rmdir /tmp/tmpdir &>/dev/null || true
   fi
