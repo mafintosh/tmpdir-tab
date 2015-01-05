@@ -1,7 +1,7 @@
 #!/bin/bash
 
 tmpdir () {
-  [ "$TMPDIR_TAB" == "" ] && TMPDIR_TAB="$(mktemp -d /tmp/tmpdir/XXXXXX)"
+  [ "$TMPDIR_TAB" == "" ] && TMPDIR_TAB="$(mkdir -p /tmp/tmpdir && mktemp -d /tmp/tmpdir/XXXXXX)"
   cd "$TMPDIR_TAB"
 }
 
