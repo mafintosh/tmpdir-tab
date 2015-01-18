@@ -1,8 +1,12 @@
 #!/bin/bash
 
 tmpdir () {
-  [ "$TMPDIR_TAB" == "" ] && TMPDIR_TAB="$(mkdir -p /tmp/tmpdir && mktemp -d /tmp/tmpdir/XXXXXX)"
-  cd "$TMPDIR_TAB"
+  [ "$TMPDIR_TAB" == "" ] && export TMPDIR_TAB="$(mkdir -p /tmp/tmpdir && mktemp -d /tmp/tmpdir/XXXXXX)"
+  if [ -t 1 ]; then
+    cd "$TMPDIR_TAB"
+  else
+    echo "$TMPDIR_TAB"
+  fi
 }
 
 _tmpdir_on_exit () {
